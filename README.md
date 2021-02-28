@@ -2,7 +2,7 @@
 
 Watching Tutorial on Youtube channel
 
-learning about gihub
+learning about github
 
 # Cool features to know !!!
 
