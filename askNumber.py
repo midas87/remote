@@ -1,5 +1,8 @@
 count = []
+
 res = " "
+=======
+
 
 while True:
     numb = input('Enter a number: ')
@@ -7,6 +10,7 @@ while True:
         count.append(numb)
     if numb == 'done':
         break
+
     try:
         if res in numb or numb.isalpha():
         #res = " " in numb
@@ -16,5 +20,12 @@ while True:
 for i in range(0, len(count)):
     count[i] = int(count[i])
 print(sum(count), len(count), sum(count)/len(count))
+
+#print(len(count))
+
+for i in range(0, len(count)):
+    count[i] = int(count[i])
+print(sum(count), len(count), )
+
 
 #print(int(count[i]))
