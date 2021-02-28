@@ -1,4 +1,5 @@
 count = []
+res = " "
 
 while True:
     numb = input('Enter a number: ')
@@ -6,10 +7,11 @@ while True:
         count.append(numb)
     if numb == 'done':
         break
-#print(len(count))
-
+    try:
+        if res in numb or numb.isalpha():
+            print('Invalid input, Please enter numbers only')
+    except NameError:
+        print('try again')
 for i in range(0, len(count)):
     count[i] = int(count[i])
-print(sum(count), len(count), )
-
-#print(int(count[i]))
+print(sum(count), len(count), sum(count)/len(count))
