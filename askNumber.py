@@ -9,7 +9,6 @@ while True:
         break
     try:
         if res in numb or numb.isalpha():
-        #res = " " in numb
             print('Invalid input, Please enter numbers only')
     except NameError:
         print('try again')
