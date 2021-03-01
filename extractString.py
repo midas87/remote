@@ -1,11 +1,8 @@
 myStr = 'X-DSPAM-Confidence: 0.8475 '
 
 search = myStr.find(':')
-newSearch = search + 2
 
-countFloat = myStr[20:26]
-
-
+countFloat = myStr[search+2:26]
 
 print(search)
-print(float(countFloat))
+print(float(countFloat)+42)
