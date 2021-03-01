@@ -4,5 +4,5 @@ search = myStr.find(':')
 
 countFloat = myStr[search+2:26]
 
-print(search)
-print(float(countFloat)+42)
+#print(search)
+print(float(countFloat))
