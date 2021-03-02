@@ -1,3 +1,8 @@
-fileHand = open('note.txt')
+fileHand = input('Enter a file name: ')
+try:
+    f = open(fileHand)
+except FileNotFoundError:
+    print('file not found',fileHand)
+    quit()
 
-print(fileHand.read().upper())
+print(f.read().upper())
