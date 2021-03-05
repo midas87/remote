@@ -15,9 +15,4 @@ for read in fileRead:
 
 print(myDict)
 
-'''    
-    if name not in myDict:
-        myDict[read] = myDict.get(read,0) + 1
-print(myDict)
 
-'''
