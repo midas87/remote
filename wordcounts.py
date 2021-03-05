@@ -4,7 +4,7 @@ fileNote = open('dicBook.txt')
 fileRead = fileNote.readlines()
 
 myDict = {}
-count = 0
+
 
 for read in fileRead:
     noWhitespace = read.strip()
