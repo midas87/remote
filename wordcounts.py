@@ -8,10 +8,11 @@ myDict = {}
 for read in fileRead:
     noWhitespace = read.strip()
     nameList = noWhitespace.split()
-    print(nameList)
+    #print(nameList)
     for name in nameList:
-        if name not in myDict:
-            myDict[name] =  myDict.get(name, 0) + 1
+        #if name not in myDict:
+        myDict[name] =  myDict.get(name, 0) + 1
+
 print(myDict)
 
 '''    
