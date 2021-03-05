@@ -5,12 +5,14 @@ fileRead = fileNote.readlines()
 
 myDict = {}
 
+
 for read in fileRead:
     noWhitespace = read.strip()
     nameList = noWhitespace.split()
-    #print(nameList)
+
     for name in nameList:
-        #if name not in myDict:
         myDict[name] =  myDict.get(name, 0) + 1
 
+maxNum = max(myDict, key=myDict.get)
 print(myDict)
+print('The most common word is:',maxNum)
