@@ -2,7 +2,7 @@
 programs for many reasons ranging from making your living to solving a difficult data analysis
    program to having fun to helping someone else solve a problem. This book assumes that
 everyone needs to know how to program and that once you know how to program, you will figure
-                        out what you wna to do with your newfound skills
+                        out what you want to do with your newfound skills
 
     We are surrounded in our daily lives with computers ranging from laptops to cell phones. We
    can think of these computers as our "personal assistants" who can take care of many things on
