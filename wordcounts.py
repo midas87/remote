@@ -8,7 +8,6 @@ myDict = {}
 
 for read in fileRead:
     noWhitespace = read.strip().split()
-    #nameList = noWhitespace.split()
 
     for name in noWhitespace:
         myDict[name] =  myDict.get(name, 0) + 1
