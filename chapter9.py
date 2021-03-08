@@ -14,5 +14,19 @@ for run in fileName:
     fileSplit = run.strip().split()
     for word in fileSplit:
         dicWord[word] = dicWord.get(word, 0) + 1
+
+getWord = max(dicWord, key=dicWord.get)
+
 print(dicWord)
-print(max(dicWord))
+#print(max(dicWord))
+
+# Find the most common word through loop to get the value for the most common key word
+
+counters = 0
+
+for k, v in dicWord.items():
+    if dicWord[k] > counters:
+        counters = dicWord[k]
+print(counters)
+
+print('The most common word is:',getWord,'with highest number:',counters)
