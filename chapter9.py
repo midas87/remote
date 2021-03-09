@@ -7,7 +7,6 @@ inputFile = input('Enter the file name: ')
 try:
     with open(inputFile) as newFile:
         fileName = newFile.readlines()
-        #print(fileName)
 except FileNotFoundError:
     print(inputFile, 'file not found')
 for run in fileName:
