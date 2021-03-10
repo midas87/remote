@@ -12,6 +12,8 @@ maxstringLen = 8
 stringLen = 4
 
 for word in myString:
-    pick = myString.
-    print(pick)
+    if len(word) < stringLen:
+        chk = random.choice(myString)
+
+        password.append(chk)
 print(password)
