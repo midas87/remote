@@ -13,7 +13,7 @@ print('Welcome to my Password Generator''\n')
 import random
 
 password = []
-listString = ''
+
 
 myString = 'abcdefghijklmnopqrstuvwxyz'
 specialChart = "!@#$%^&*?~"
@@ -36,6 +36,6 @@ for word in myString:
         intS = random.randint(1,9)
         password.append(intS)
 
-print(password,'\n')
+
 newListString = ''.join([str(item) for item in password])
 print('Password:',newListString)
