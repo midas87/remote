@@ -3,9 +3,6 @@
 ### Start the code on 8th of March 2021 ###
 ### Finish on 12th of March 2021 12:00 AM ###
 
-#print('***')
-#print('--***')
-#print('----***''\n')
 
 print('Welcome to my Password Generator''\n')
 
@@ -13,7 +10,7 @@ print('Welcome to my Password Generator''\n')
 import random
 
 password = []
-listString = ''
+
 
 myString = 'abcdefghijklmnopqrstuvwxyz'
 specialChart = "!@#$%^&*?~"
@@ -36,6 +33,6 @@ for word in myString:
         intS = random.randint(1,9)
         password.append(intS)
 
-print(password,'\n')
+
 newListString = ''.join([str(item) for item in password])
 print('Password:',newListString)
