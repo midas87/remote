@@ -3,9 +3,6 @@
 ### Start the code on 8th of March 2021 ###
 ### Finish on 12th of March 2021 12:00 AM ###
 
-#print('***')
-#print('--***')
-#print('----***''\n')
 
 print('Welcome to my Password Generator''\n')
 
