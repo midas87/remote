@@ -12,7 +12,7 @@ import random
 
 password = []
 
-maxstringLen = int(input())
+maxstringLen = input()
 
 
 myString = 'abcdefghijklmnopqrstuvwxyz'
@@ -20,8 +20,8 @@ specialChart = "!@#$%^&*?~"
 capString = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
-
 for word in myString:
+
 
     if word not in password and len(password) < int(maxstringLen):
         chk = random.choice(myString)
