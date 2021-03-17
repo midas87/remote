@@ -9,7 +9,6 @@ print('You have five guesses')
 count = 0
 maxCount = 5
 
-#guess = int(input('Guess the number: '))
 
 while True:
         try:
@@ -20,15 +19,13 @@ while True:
                 break
 
             if numb > guess:
-                print('You guess is low, Please try again')
-                #guess = int(input('Guess the number: '))
+                print('You guess is low, please choose higher number')
                 count = count + 1
                 countRem = maxCount - count
                 print('You have',countRem,'guesses left')
 
             if numb < guess:
                 print('You guess is high, please choose lower number')
-                #guess = int(input('Guess the number: '))
                 count = count + 1
                 countRem = maxCount - count
                 print('You have', countRem, 'guesses left')
