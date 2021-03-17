@@ -3,20 +3,32 @@
 import random
 
 numb = random.randint(1,20)
+#print(numb)
 
-print('You have three guesses')
+print('You have five guesses')
 
-print('Guess the number: ', end='')
+#print('Guess the number: ', end='')
 
-guess = int(input())
-count = 0
-maxCount = 3
+guess = int(input('Guess the number: '))
+count = 1
+maxCount = 5
 
+while True:
 
-if numb > guess:
-    print('You guess is low')
-elif numb < guess:
-    print('You guess is high')
-else:
-    print('You got the guess right, the correct number is:',numb)
+    if count == maxCount:
+        print('you have max your number of guesses, the guess number is:',numb)
+        break
+    if numb > guess:
+        print('You guess is low, Please try again')
+        guess = int(input('Guess the number: '))
+        count = count + 1
+
+    if numb < guess:
+        print('You guess is high, please choose lower number')
+        guess = int(input('Guess the number: '))
+        count = count + 1
+
+    if numb == guess:
+        print('You got the guess right, the correct number is:',numb)
+        break
 
