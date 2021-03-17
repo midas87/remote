@@ -12,14 +12,11 @@ guess = int(input())
 count = 0
 maxCount = 3
 
-while True:
 
-    if numb > guess:
-        print('your guess is low')
-        count = count + 1
-    elif numb < guess:
-        print('your guess is high')
-    elif count == maxCount:
-        print('You have max you guesses')
-    else:
-        print('Please try again')
+if numb > guess:
+    print('You guess is low')
+elif numb < guess:
+    print('You guess is high')
+else:
+    print('You got the guess right, the correct number is:',numb)
+
