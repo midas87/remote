@@ -10,9 +10,7 @@ print('You have five guesses')
 count = 1
 maxCount = 5
 
-#guess = int(input('Guess the number: '))
 
-#print('Guess the number: ', end='')
 try:
     guess = int(input('Guess the number: '))
 except ValueError:
