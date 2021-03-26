@@ -1,24 +1,18 @@
 import requests
 from bs4 import BeautifulSoup
 
-pageUrl = requests.get('https://www.newegg.com/p/pl?d=nas').text
+# pageUrl = requests.get('https://www.newegg.com/p/pl?d=nas').text
 
+bb = requests.get('https://www.bestbuy.ca/en-ca/collection/headphones-on-sale/23058?icmp=pa_categorylanding_shopbycategory_audio_onsale').text
 
-sp = BeautifulSoup(pageUrl, 'lxml')
+sp = BeautifulSoup(bb, 'lxml')
 
-lb = sp.find_all('option')
+print(sp.prettify())
 
-for n in lb:
-    ckPrice = n.attrs
-    print(ckPrice['value'])
-    if int(ckPrice['value']) == 1:
-        nPage = requests.get('https://www.newegg.com/p/pl?d=nas&recaptcha=pass&Order=1').text
-        nwPage = BeautifulSoup(nPage, 'lxml')
-        print(nwPage('a'))
-        break
+'''
+containers = sp.find_all('div', class_='productItemRow_hyNOs row_1mOdd')
 
+container = containers[0]
 
-
-
-#print(lb)
-#print(sp.prettify())
+print(container)
+'''
