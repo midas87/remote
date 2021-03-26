@@ -3,22 +3,43 @@ from bs4 import BeautifulSoup
 
 pageUrl = requests.get('https://www.newegg.com/p/pl?d=nas').text
 
+# bb = requests.get('https://www.bestbuy.ca/en-ca/collection/headphones-on-sale/23058?icmp=pa_categorylanding_shopbycategory_audio_onsale').text
 
 sp = BeautifulSoup(pageUrl, 'lxml')
 
-lb = sp.find_all('option')
-
-for n in lb:
-    ckPrice = n.attrs
-    print(ckPrice['value'])
-    if int(ckPrice['value']) == 1:
-        nPage = requests.get('https://www.newegg.com/p/pl?d=nas&recaptcha=pass&Order=1').text
-        nwPage = BeautifulSoup(nPage, 'lxml')
-        print(nwPage('a'))
-        break
+# print(sp.prettify())
 
 
+containers = sp.find_all('div', class_='item-container')
 
+container = containers[0]
 
-#print(lb)
-#print(sp.prettify())
+n = container.div.div.a.img['title']
+
+sales = containers = sp.find_all('span', {'class': 'price-save-endtime'})
+
+salesEnd = sales[0].text
+
+shipping = containers = sp.find_all('li', {'class': 'price-ship'})
+
+freeShip = shipping[0].text
+
+link = containers = sp.find_all('a', class_='item-title')
+
+productName = link[0].text
+
+site = container.a['href']
+
+# print(link)
+
+print(freeShip)
+
+print(n)
+
+# print(sales)
+
+print(salesEnd)
+
+print(productName)
+
+print(site)
