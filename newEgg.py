@@ -9,32 +9,34 @@ sp = BeautifulSoup(pageUrl, 'lxml')
 
 # print(sp.prettify())
 
+dataContainers = sp.find_all('div', class_='item-container')
 
-containers = sp.find_all('div', class_='item-container')
 
-container = containers[0]
+for container in dataContainers:
 
-n = container.div.div.a.img['title']
+    # container = containers[0]
 
-sales = containers = sp.find_all('span', {'class': 'price-save-endtime'})
+    #n = container.div.div.a.img['title']
 
-salesEnd = sales[0].text
+    sales = dataContainers = sp.find_all('span', {'class': 'price-save-endtime'})
 
-shipping = containers = sp.find_all('li', {'class': 'price-ship'})
+    salesEnd = sales[0].text
 
-freeShip = shipping[0].text
+    shipping = container = sp.find_all('li', {'class': 'price-ship'})
 
-link = containers = sp.find_all('a', class_='item-title')
+    freeShip = shipping[0].text
 
-productName = link[0].text
+    link = container = sp.find_all('a', class_='item-title')
 
-site = container.a['href']
+    productName = link[0].text
+
+    #site = container.a['href']
 
 # print(link)
 
 print(freeShip)
 
-print(n)
+#print(n)
 
 # print(sales)
 
@@ -42,4 +44,4 @@ print(salesEnd)
 
 print(productName)
 
-print(site)
+#print(site)
