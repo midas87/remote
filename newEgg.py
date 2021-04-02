@@ -3,25 +3,42 @@ from bs4 import BeautifulSoup
 
 pageUrl = requests.get('https://www.newegg.com/p/pl?d=nas').text
 
-# bb = requests.get('https://www.bestbuy.ca/en-ca/collection/headphones-on-sale/23058?icmp=pa_categorylanding_shopbycategory_audio_onsale').text
-
 sp = BeautifulSoup(pageUrl, 'lxml')
 
-nas = sp.find('div', {'class': 'item-cell'})
-brandName = nas.find('div', {'class': 'item-branding'})
-name = brandName.a.img['title']
+nasDevices = sp.find_all('div', {'class': 'item-cell'})
 
-prodSpec = nas.find('a', {'class': 'item-title'}).text
+for nas in nasDevices:
 
-promo = nas.find('p', class_='item-promo').text
+    promo = nas.find('p', class_='item-promo').text
 
-salesEnd = nas.find('span', {'class': 'price-save-endtime'}).text.replace('-', '')
+    if 'promo' in promo:
 
-print(name)
-# print(brandName)
-print(prodSpec)
-print(promo)
-print(salesEnd)
+
+        brandName = nas.find('div', {'class': 'item-branding'})
+        name = brandName.a.img['title']
+
+        prodSpec = nas.find('a', {'class': 'item-title'}).text
+
+        #salesEnd = nas.find('span', {'class': 'price-save-endtime'}).text.replace('-', '')
+
+        freeShip = nas.find('li', {'class': 'price-ship'}).text
+
+        shipBy = nas.find('a', class_='shipped-by-newegg').text
+
+        print(f'Brand: {name}, Specs: {prodSpec},  '
+              f', FreeShipping : {freeShip}, ShipBy: {shipBy}''\n')
+
+
+
+    #Promotion: {promo}
+    #SalesEnding: {salesEnd}
+    # print(name)
+    # print(brandName)
+    # print(prodSpec)
+    #print(promo)
+    # print(salesEnd)
+    # print(freeShip)
+    # print(shipBy)
 
 '''
 # print(sp.prettify())
