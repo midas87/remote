@@ -1,11 +1,10 @@
-#Rock Paper Scissors Game
+# Rock Paper Scissors Game
 
-print('ROCK, PAPER SCISSORS GAME','\n')
+print('ROCK, PAPER SCISSORS GAME', '\n')
 
 import random
 
 compGuess = ['Rock', 'Paper', 'Scissors']
-
 
 while True:
     try:
