@@ -15,11 +15,7 @@ for readLine in pageScrap:
 
     author = readLine.find('small', {'class': 'author'}).text
 
-    fileQuote.write(quote)
-    #fileQuote.write(author, '\n')
+    fileQuote.write(quote + '\n')
+    fileQuote.write(author + '\n')
 
 fileQuote.close()
-# print(quote)
-# print(author)
-
-# print(html_request)
