@@ -1,5 +1,4 @@
 import requests
-
 from bs4 import BeautifulSoup as bs
 
 html_request = requests.get('https://quotes.toscrape.com/').text
