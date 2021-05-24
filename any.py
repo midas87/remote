@@ -100,6 +100,7 @@ print(pets)
 
 '''
 
+'''
 # Mountain Poll Code
 
 responses = {}
@@ -126,3 +127,14 @@ for name, response in responses.items():
     print(f'{name} would like to climb {response}.')
 
 
+'''
+
+sandwich_orders = ['tortas', 'panini', 'grilled cheese', 'blt sandwich', 'club sandwich,',
+                   'piadina romagnola', 'reuben', 'submarine sandwich', 'croque monsieur',
+                   'banhmi', 'Po Boy', 'francesinha', 'cheesesteak', 'cuban']
+
+
+finished_sandwiches = []
+
+
+# print(sandwich_orders)
