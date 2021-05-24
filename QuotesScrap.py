@@ -21,7 +21,7 @@ for readLine in pageScrap:
 
         newTag = nameTag.find('a', {'class': 'tag'}).text
         fileQuote.write(newTag + '\n')
-        print(nameTag[a])
+        #print(nameTag[a])
         # newTag = nameTag.find('a', {'class': 'tag'}).text
         # fileQuote.write(newTag + '\n')
 
