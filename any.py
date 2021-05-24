@@ -129,6 +129,8 @@ for name, response in responses.items():
 
 '''
 
+# Sandwich Code
+
 sandwich_orders = ['tortas', 'panini', 'grilled cheese', 'blt sandwich', 'club sandwich,',
                    'piadina romagnola', 'reuben', 'submarine sandwich', 'croque monsieur',
                    'banhmi', 'Po Boy', 'tuna', 'francesinha', 'cheesesteak', 'cuban', 'pastrami']
@@ -137,21 +139,35 @@ finished_sandwiches = []
 
 new_sandwich = 'pastrami'
 
-# print(len(sandwich_orders))
+
 print(sandwich_orders)
+print(len(sandwich_orders))
 
 for check in sandwich_orders:
 
     if len(sandwich_orders) < 18:
         sandwich_orders.append(new_sandwich)
-        # print(f'{new_sandwich} is added to the sandwich order')
-        # print(sandwich_orders)
 
-# print(len(sandwich_orders))
+print(sandwich_orders)
 
+if len(sandwich_orders) == 18:
+    print('Deli has ran out of Pastrami sandwich')
+
+while sandwich_orders:
+    new_sliceSand = sandwich_orders.pop()
+    if 'pastrami' not in new_sliceSand:
+        finished_sandwiches.append(new_sliceSand.title())
+
+
+print(f'Here are the finish orders of sandwiches {finished_sandwiches}')
+print(len(finished_sandwiches))
+
+
+'''
 for sandwich_order in sandwich_orders:
     print(f'I made your {sandwich_order.title()} sandwich')
     finished_sandwiches.append(sandwich_order)
 
 print('This are the list of sandwich that are made! ')
 print(finished_sandwiches)
+'''
