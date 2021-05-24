@@ -124,3 +124,5 @@ while polling_active:
 print("\n--- Poll Result ---")
 for name, response in responses.items():
     print(f'{name} would like to climb {response}.')
+
+
