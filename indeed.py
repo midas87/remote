@@ -1,4 +1,5 @@
 import requests
+<<<<<<< HEAD
 from bs4 import BeautifulSoup as bs
 
 webPage = requests.get('https://ca.indeed.com/jobs?q=linux+system+administrator&l=Mississauga%2C+ON').text
@@ -14,3 +15,7 @@ for i in jobSearch:
     print(datePosted)
 
 # print(jobSearch)
+=======
+from bs4 import BeautifulSoup
+
+>>>>>>> master
