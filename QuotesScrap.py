@@ -18,13 +18,12 @@ for readLine in pageScrap:
     fileQuote.write(author + '\n')
 
     for nameTag in tag:
-<<<<<<< HEAD
+
         newTag = nameTag.find('a', {'class': 'tag'}).text
         fileQuote.write(newTag + '\n')
-=======
         print(nameTag[a])
-        #newTag = nameTag.find('a', {'class': 'tag'}).text
-        #fileQuote.write(newTag + '\n')
->>>>>>> test
+        # newTag = nameTag.find('a', {'class': 'tag'}).text
+        # fileQuote.write(newTag + '\n')
+
 
 fileQuote.close()
