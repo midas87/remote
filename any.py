@@ -63,6 +63,7 @@ while True:
         break
 '''
 # Book method
+'''
 
 while unconfirmed_users:
     current_user = unconfirmed_users.pop()
@@ -76,4 +77,23 @@ print('\nThe following users have been confirmed:')
 for confirmed_user in confirmed_users:
     print(confirmed_user.title())
 
+'''
 
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+
+# print(pets)
+
+
+while pets:
+    pets.remove('cat')
+    if 'cat' not in pets:
+        break
+
+print(pets)
+
+# This is much better way to write a code
+
+while 'cat' in pets:
+    pets.remove('cat')
+
+print(pets)
