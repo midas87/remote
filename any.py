@@ -174,10 +174,11 @@ print(finished_sandwiches)
 vacations = {}
 
 name = input('Please Enter your name: ')
-dream_Vacation = input('Where is your dream vacation: ')
+dream_Vacation = input('If you could visit one place in the world, Where would you go? ')
 
 vacations[name] = dream_Vacation
 print(vacations)
+print('\n''---- Vacation Poll ---')
 
 for name, dream_Vacation in vacations.items():
     print(f'Hi {name} enjoy your vacation in {dream_Vacation}')
