@@ -139,7 +139,6 @@ finished_sandwiches = []
 
 new_sandwich = 'pastrami'
 
-
 print(sandwich_orders)
 print(len(sandwich_orders))
 
@@ -158,10 +157,8 @@ while sandwich_orders:
     if 'pastrami' not in new_sliceSand:
         finished_sandwiches.append(new_sliceSand.title())
 
-
 print(f'Here are the finish orders of sandwiches {finished_sandwiches}')
 print(len(finished_sandwiches))
-
 
 '''
 for sandwich_order in sandwich_orders:
@@ -171,3 +168,16 @@ for sandwich_order in sandwich_orders:
 print('This are the list of sandwich that are made! ')
 print(finished_sandwiches)
 '''
+
+# Vacation Dream
+
+vacations = {}
+
+name = input('Please Enter your name: ')
+dream_Vacation = input('Where is your dream vacation: ')
+
+vacations[name] = dream_Vacation
+print(vacations)
+
+for name, dream_Vacation in vacations.items():
+    print(f'Hi {name} enjoy your vacation in {dream_Vacation}')
